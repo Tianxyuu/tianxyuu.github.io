@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyanxu</title>
+    <link rel="stylesheet" href="/css/style.css?v=1753972043">
+    <link rel="stylesheet" href="/css/lives.css?v=1753972043">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    
+  </head>
+<body>
+  <header>
+    <div class="logo">
+      <h1 style="font-size: 28px; margin-bottom: 10px;">
+        <a href="/" style="color: inherit; text-decoration: none;">Tyanxu</a>
+      </h1>
+    </div>
+    <button id="toggle-theme" style="position: absolute; top: 60px; right: 25px; background: none; border: none; cursor: pointer;">
+      <img src="/icons/mode-toggle.svg" alt="toggle-theme" id="mode-icon" width="24" height="24">
+      <img src="/icons/mode-toggle.svg" alt="toggle-theme" id="mode-icon" width="24" height="24">
+    </button>
+    <div class="social-links">
+      <a href="https://instagram.com" target="_blank">
+        <img src="/icons/wechat.svg" alt="wechat">
+      </a>
+      <a href="https://imdb.com" target="_blank">
+        <img src="/icons/redbook.svg" alt="redbook">
+      </a>
+      <a href="https://example.com" target="_blank">
+        <img src="/icons/tiktok.svg" alt="tiktok">
+      </a>
+    </div>
+    <nav>
+      <a href="/bio">Bio</a>
+      <a href="/design">Design</a>
+      <a href="/development">Development</a>
+      <a href="/lives"  class="active">Lives</a>
+      <a href="/reading">Reading</a>
+      <a href="/about">About</a>
+    </nav>
+  </header>
+  <div class="timeline-container">
+    <button class="timeline-nav-button timeline-nav-left" id="nav-left">&larr;</button>    
+    <div class="timeline-line"></div>
+    <div class="timeline-track" id="timeline-track">
+      
+      <div class="timeline-point">
+        <a href="/lives/20250730-3/" class="timeline-point-link">
+        <div class="timeline-date">2023.12</div>
+        <div class="timeline-dot"></div>        
+          <div class="timeline-text">
+            <div class="zh">成都</div>
+            <div class="en">Chengdu</div>
+            <div class="desc">Thousands of miles to Guangzhou.</div>
+          </div>
+        </a>
+        </div>        
+      
+      <div class="timeline-point">
+        <a href="/lives/20250730-2-2/" class="timeline-point-link">
+        <div class="timeline-date">2024.11</div>
+        <div class="timeline-dot"></div>        
+          <div class="timeline-text">
+            <div class="zh">威海</div>
+            <div class="en">WeHi</div>
+            <div class="desc">A winter trip to chase snow in Weihai.</div>
+          </div>
+        </a>
+        </div>        
+      
+      <div class="timeline-point">
+        <a href="/lives/20250730-3-2-2/" class="timeline-point-link">
+        <div class="timeline-date">2025.01</div>
+        <div class="timeline-dot"></div>        
+          <div class="timeline-text">
+            <div class="zh">广州</div>
+            <div class="en">Canton</div>
+            <div class="desc">Thousands of miles to Guangzhou.</div>
+          </div>
+        </a>
+        </div>        
+      
+      <div class="timeline-point">
+        <a href="/lives/20250730-3-2/" class="timeline-point-link">
+        <div class="timeline-date">2025.01</div>
+        <div class="timeline-dot"></div>        
+          <div class="timeline-text">
+            <div class="zh">广州</div>
+            <div class="en">Canton</div>
+            <div class="desc">Thousands of miles to Guangzhou.</div>
+          </div>
+        </a>
+        </div>        
+      
+      <div class="timeline-point">
+        <a href="/lives/20250730/" class="timeline-point-link">
+        <div class="timeline-date">2025.01</div>
+        <div class="timeline-dot"></div>        
+          <div class="timeline-text">
+            <div class="zh">香港</div>
+            <div class="en">Canton</div>
+            <div class="desc">Thousands of miles to Guangzhou.</div>
+          </div>
+        </a>
+        </div>        
+      
+      <div class="timeline-point">
+        <a href="/lives/20250730-2/" class="timeline-point-link">
+        <div class="timeline-date">2025.04</div>
+        <div class="timeline-dot"></div>        
+          <div class="timeline-text">
+            <div class="zh">青州</div>
+            <div class="en">Qingzhou</div>
+            <div class="desc">Qingzhou Smile.</div>
+          </div>
+        </a>
+        </div>        
+      
+    </div>
+    
+    <button class="timeline-nav-button timeline-nav-right" id="nav-right">&rarr;</button>
+  </div>
+
+  <footer class="footer-nav">
+    <a href="/">&larr; Return</a>
+  </footer>
+  <script src="/js/theme.js"></script>
+  <script>
+    const track = document.getElementById('timeline-track');
+    document.querySelector('.timeline-nav-left').onclick = () => track.scrollBy({ left: -320, behavior: 'smooth' });
+    document.querySelector('.timeline-nav-right').onclick = () => track.scrollBy({ left: 320, behavior: 'smooth' });
+    
+
+    const container = document.querySelector('.timeline-container');
+    const line = document.querySelector('.timeline-line');
+    const leftBtn = document.getElementById('nav-left');
+    const rightBtn = document.getElementById('nav-right');
+    
+    const leftOffset = leftBtn.offsetWidth;
+    const rightOffset = rightBtn.offsetWidth;
+    
+    
+    const trackRect = track.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+    const relativeLeft = trackRect.left - containerRect.left;
+
+    
+    function updateTimelineLine() {
+      
+      
+      line.style.left = (leftOffset) + 'px';
+      line.style.width = (track.clientWidth  ) + 'px';
+    }
+    
+    
+    updateTimelineLine();
+    
+    window.addEventListener('resize', updateTimelineLine);
+    track.addEventListener('scroll', updateTimelineLine);
+  </script>
+  
+</body>
+</html>

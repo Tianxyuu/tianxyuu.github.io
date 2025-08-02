@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Studying on Tyanxu</title>
+    <link>http://localhost:1313/categories/studying/</link>
+    <description>Recent content in Studying on Tyanxu</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jul 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/studying/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>学习R语言可视化</title>
+      <link>http://localhost:1313/development/20250730/</link>
+      <pubDate>Wed, 30 Jul 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/development/20250730/</guid>
+      <description>&lt;p&gt;This paper applies single-cell RNA sequencing (scRNA-seq) to dissect cellular heterogeneity in mouse models of Alzheimer&amp;rsquo;s disease.&lt;/p&gt;&#xA;&lt;p&gt;Key points:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Dataset&lt;/strong&gt;: scRNA-seq from hippocampus region at different stages of disease progression.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Findings&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Identification of 5 major microglia subtypes.&lt;/li&gt;&#xA;&lt;li&gt;Disease-associated microglia (DAM) emerge early and expand with time.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Conclusion&lt;/strong&gt;: Dynamic microglia states correlate with amyloid burden and neuroinflammation.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;This study underscores the potential of single-cell technologies to uncover immune dynamics in neurodegenerative disorders.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

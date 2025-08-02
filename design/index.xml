@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design on Tyanxu</title>
+    <link>http://localhost:1313/design/</link>
+    <description>Recent content in Design on Tyanxu</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aesthetic Poster Design</title>
+      <link>http://localhost:1313/design/20250730-2-2/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/design/20250730-2-2/</guid>
+      <description>&lt;p&gt;这里是作品描述和展示页正文&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aesthetic Poster Design</title>
+      <link>http://localhost:1313/design/20250730-2/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/design/20250730-2/</guid>
+      <description>&lt;p&gt;这里是作品描述和展示页正文&amp;hellip;是不是&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aesthetic Poster Design</title>
+      <link>http://localhost:1313/design/20250730-3/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/design/20250730-3/</guid>
+      <description>&lt;p&gt;这里是作品描述和展示页正文&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>从0开始的排版</title>
+      <link>http://localhost:1313/design/20250730/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/design/20250730/</guid>
+      <description>&lt;p&gt;这里是作品描述和展示页正文&amp;hellip;是因为我的文字不够长吗？还是因为我的内容不够多呢，为什么会导致整个文本居中&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

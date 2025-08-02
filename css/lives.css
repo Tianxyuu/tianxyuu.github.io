@@ -1,0 +1,170 @@
+/* Lives 页面时间轴容器 */
+.timeline-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 40px;
+  overflow: hidden;
+}
+
+/* 横线：相对于 timeline-container */
+.timeline-line {
+  position: absolute;
+  top: calc(80px + 120px); /* 即 padding-top + timeline-point 高度一半 */
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--accent-color);
+  z-index: 1;
+}
+
+
+/* 时间轴主轨道 */
+.timeline-track {
+  display: flex;
+  align-items: flex-start;
+  align-items: center;
+  position: relative;
+  gap: 2px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 80px 0;
+  
+  /* 隐藏滚动条的关键样式 */
+  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+
+.timeline-track::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari */
+}
+
+/* 每个时间点 */
+.timeline-point {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 0 0 auto;
+  height: 240px;
+  width: 280px;  /* 或更大 */
+  min-width: 240px;  /* 防止容器压缩 */
+}
+
+.timeline-point:hover{
+  font-weight: bold;
+}
+
+
+/* 时间文字 */
+.timeline-date {
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+/* 时间点圆圈 */
+.timeline-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--bg-color);          /* 中空白心 */
+  border: 1px solid var(--accent-color);      /* 同色边框 */
+  transition: all 0.3s ease-in-out;
+}
+
+/* 悬浮时添加边框模拟“加粗” */
+.timeline-point:hover .timeline-dot {
+  border: 2px solid var(--accent-color);
+  background-color: var(--accent-color);      /* 填充为 accent 色 */
+  border-color: var(--accent-color);  
+}
+
+.timeline-text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);  /* 只平移 X 方向 */
+  text-align: center;
+}
+
+.timeline-text .place {
+  display: inline-block; /* 关键，使 transform 生效 */
+  text-align: center;
+  transition: transform 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+
+.timeline-text .place .zh {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timeline-text .place .en {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-top: 2px;
+  color: var(--text-color);  /* 或者更浅一点的色值 */
+}
+
+.timeline-text .desc {
+  font-size: 12px;
+  color: var(--text-color);
+  margin-top: 4px;                  /* 与上方 place 分离 */
+}
+
+
+/* 箭头 */
+.timeline-nav-button {
+  position: absolute;
+                      /* 和线居中 */
+  top: calc(80px + 120px); /* 与线居中对齐 */
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: none;
+  border: 1.5px solid var(--accent-color);
+  color: var(--accent-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.timeline-nav-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+
+.timeline-nav-left {
+  left: 0px;
+}
+
+.timeline-nav-right {
+  right: 0px;
+}
+
+.timeline-nav-left:hover,
+.timeline-nav-right:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);             /* 悬浮时反色 */
+}
+
+.timeline-point-link {
+  text-decoration: none;
+  color: inherit;
+}

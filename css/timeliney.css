@@ -1,0 +1,171 @@
+.timeline-container {
+  max-width: 960px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Noto Serif SC', serif;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 36px;
+  color: var(--accent-color);
+}
+
+.subnav {
+  display: flex;
+  justify-content: center;
+  margin: 50px 20px;
+  gap: 20px;
+}
+
+.subnav-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 23px; /* 按钮宽高一致，形成圆形 */
+  height: 23px;
+  border: 1px solid var(--accent-color); /* 边框色 */
+  border-radius: 50%; /* 圆形 */
+  background: transparent;
+  color: var(--accent-color);
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.subnav-btn:hover {
+/*background-color: var(--link-color);*/
+/*text-decoration: underline;*/
+/*text-underline-offset: 6px;*/
+/*text-decoration-thickness: 1.6px;*/
+  
+}
+
+
+.subnav-btn.active {
+/*background-color: var(--accent-color);*/
+/*color: white;*/
+/*text-decoration: underline;*/
+/*text-underline-offset: 6px;*/
+/*text-decoration-thickness: 1.6px;*/
+  background-color: var(--accent-color);
+    color: var(--button-active-text);
+  
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 40px;
+  position: relative;
+  align-items: stretch;
+}
+
+/* 中间线和点 */
+.timeline-center {
+  position: relative;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  
+}
+
+/* 垂直时间线贯穿全部内容 */
+.timeline-line {
+  position: absolute;
+  top: 0;
+  height: auto;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--accent-color);
+  z-index: 0;
+}
+
+.timeline-dot {
+  position: relative;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/*.timeline-item::before {*/
+/*content: "";*/
+/*position: absolute;*/
+/*left: -10px;*/
+/*top: 5px;*/
+/*width: 16px;*/
+/*height: 16px;*/
+/*background: var(--accent-color);*/
+/*border-radius: 50%;*/
+/*}*/
+
+/* 左侧日期 */
+.timeline-left {
+  flex: 0 0 300px;
+  text-align: right;
+  padding-right: 30px;
+}
+
+.timeline-date {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.timeline-tags {
+  font-size: 13px;
+}
+
+.timeline-tags .tag {
+  background-color: #eee;
+  border-radius: 3px;
+  padding: 2px 6px;
+  margin-left: 4px;
+  display: inline-block;
+  color: #333;
+}
+
+.timeline-right {
+  flex: 1;
+  padding-left: 20px
+}
+
+.timeline-right h2 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+.timeline-right p {
+  margin: 6px 0 0 0;
+  font-size: 15px;
+  color: #666;
+}
+
+
+.timeline-right a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.timeline-right a:hover {
+  color: var(--accent-color);
+}

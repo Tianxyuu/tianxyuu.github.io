@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/timeliney.css?v=1753975429">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".subnav-btn");
+      const items = document.querySelectorAll(".timeline-item");
+      
+      
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+      
+      const defaultCategory = getQueryParam("category") || "Studying";  
+      
+      
+      buttons.forEach((btn) => {
+        if (btn.dataset.category === defaultCategory) {
+          btn.classList.add("active");
+        }
+        btn.addEventListener("click", function () {
+          buttons.forEach((b) => b.classList.remove("active"));
+          this.classList.add("active");
+          filterItems(this.dataset.category);
+        });
+      });
+      
+      filterItems(defaultCategory);
+      
+      function filterItems(category) {
+        items.forEach(item => {
+          item.style.display = (item.dataset.category === category) ? "flex" : "none";
+        });
+      }
+    });
+  </script>
+  <body>
+    <header>
+      <div class="logo">
+        <h1 style="font-size: 28px; margin-bottom: 10px;">
+          <a href="/" style="color: inherit; text-decoration: none;">Tyanxu</a>
+        </h1>
+      </div>
+      <button id="toggle-theme" style="position: absolute; top: 60px; right: 25px; background: none; border: none; cursor: pointer;">
+        <img src="/icons/mode-toggle.svg" alt="toggle-theme" id="mode-icon" width="24" height="24">
+        <img src="/icons/mode-toggle.svg" alt="toggle-theme" id="mode-icon" width="24" height="24">
+      </button>
+      <div class="social-links">
+        <a href="https://instagram.com" target="_blank">
+          <img src="/icons/wechat.svg" alt="wechat">
+        </a>
+        <a href="https://imdb.com" target="_blank">
+          <img src="/icons/redbook.svg" alt="redbook">
+        </a>
+        <a href="https://example.com" target="_blank">
+          <img src="/icons/tiktok.svg" alt="tiktok">
+        </a>
+      </div>
+      <nav>
+        <a href="/bio">Bio</a>
+        <a href="/design">Design</a>
+        <a href="/development" class="active">Development</a>
+        <a href="/lives">Lives</a>
+        <a href="/reading">Reading</a>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+
+    <main class="timeline-container">
+      <div class="subnav">
+        <a href="javascript:void(0);" class="subnav-btn" data-category="Studying">知</a>
+        <a href="javascript:void(0);" class="subnav-btn" data-category="Practicing">行</a>
+      </div>
+
+      <div class="timeline">
+        
+        
+          
+          
+          <div class="timeline-item" data-category="Relaxing">
+            <div class="timeline-left">
+              <div class="timeline-date">2025-07-31</div>
+              <div class="timeline-tags">
+                
+                <span class="tag">人文学</span>
+                
+              </div>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-line"></div>
+              
+            </div>
+            <div class="timeline-right">
+              <h2><a href="/reading/202507292/">艺术让人成为人</a></h2>
+              <p>A brief note on a recent paper about graph neural networks.</p>
+            </div>
+          </div>
+          
+        
+          
+          
+          <div class="timeline-item" data-category="Relaxing">
+            <div class="timeline-left">
+              <div class="timeline-date">2025-07-31</div>
+              <div class="timeline-tags">
+                
+                <span class="tag">adjective</span>
+                
+              </div>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-line"></div>
+              
+            </div>
+            <div class="timeline-right">
+              <h2><a href="/reading/20250731/">One Day One Word|Petulant </a></h2>
+              <p>a person who is angry and annoyed, or an attitude or behavior showing the emotions of such a person.</p>
+            </div>
+          </div>
+          
+        
+          
+          
+          <div class="timeline-item" data-category="Practicing">
+            <div class="timeline-left">
+              <div class="timeline-date">2025-07-30</div>
+              <div class="timeline-tags">
+                
+                <span class="tag">R</span><span class="tag">Deep Learning</span>
+                
+              </div>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-line"></div>
+              
+            </div>
+            <div class="timeline-right">
+              <h2><a href="/development/202507302/">练习R语言可视化</a></h2>
+              <p>简简单单的可视化操作练习</p>
+            </div>
+          </div>
+          
+        
+          
+          
+          <div class="timeline-item" data-category="Studying">
+            <div class="timeline-left">
+              <div class="timeline-date">2025-07-30</div>
+              <div class="timeline-tags">
+                
+                <span class="tag">R</span><span class="tag">Deep Learning</span>
+                
+              </div>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-line"></div>
+              
+            </div>
+            <div class="timeline-right">
+              <h2><a href="/development/20250730/">学习R语言可视化</a></h2>
+              <p>简简单单的可视化操作学习</p>
+            </div>
+          </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          
+          <div class="timeline-item" data-category="Reading">
+            <div class="timeline-left">
+              <div class="timeline-date">2025-07-28</div>
+              <div class="timeline-tags">
+                
+                <span class="tag">GNN</span><span class="tag">Deep Learning</span>
+                
+              </div>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-line"></div>
+              
+            </div>
+            <div class="timeline-right">
+              <h2><a href="/bio/20250729/">Single-cell transcriptomics in Alzheimer&#39;s Disease</a></h2>
+              <p>A brief note on a recent paper about graph neural networks.</p>
+            </div>
+          </div>
+          
+        
+          
+          
+          <div class="timeline-item" data-category="Writing">
+            <div class="timeline-left">
+              <div class="timeline-date">2025-07-28</div>
+              <div class="timeline-tags">
+                
+                <span class="tag">GNN</span><span class="tag">Deep Learning</span>
+                
+              </div>
+            </div>
+            <div class="timeline-center">
+              <div class="timeline-line"></div>
+              
+            </div>
+            <div class="timeline-right">
+              <h2><a href="/bio/202507292/">Example Reading Note</a></h2>
+              <p>A brief note on a recent paper about graph neural networks.</p>
+            </div>
+          </div>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      </div>
+    </main>
+
+    <footer class="footer-nav">
+      <a href="/">&larr; Return</a>
+    </footer>
+    <script src="/js/theme.js"></script>
+  </body>
+</html>
+
